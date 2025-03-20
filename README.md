@@ -155,4 +155,33 @@ services:
     2. Use the Agent IP and other following details as shown in snapshot.
        <img width="688" alt="zabbix-host-add" src="https://github.com/user-attachments/assets/ef0bf2c6-ef6c-42cb-9692-f6257d04770e" />
 
+     ### Edit the agent.conf file
+     ```
+     vim /etc/zabbix/zabbix_agentd.conf
+     ```
+     Update this and put Master IP 192.168.84.131 at places in Service and zabbix in Hostname.
+  1. Server=192.168.84.131
+  2. ServerActive=192.168.84.131
+  3. Hostname=Node-1
+     
+     <img width="826" alt="zabbix_agentd conf " src="https://github.com/user-attachments/assets/e6c4dff7-ae30-48da-82ea-63284ee6fb35" />
 
+ ### Now restart the agent server
+```
+systemctl restart zabbix-agent
+```
+```
+systemctl status zabbix-agent
+```
+
+#### Refresh and Check the master server Zabbix url, it will reflect there with green color.
+<img width="800" alt="zabbix-master-host-added" src="https://github.com/user-attachments/assets/ef5c2c05-738b-4211-8f88-1430ca066763" />
+
+#### We can also check the server's more detail: Monitoring < Latest data
+<img width="801" alt="image" src="https://github.com/user-attachments/assets/eff34347-69cc-4303-abde-791ad4091d51" />
+
+#### Same thing we can check from terminal on Zabbix-Agent, using command:
+```
+df -Th
+```
+<img width="562" alt="zabbix-node-check-memory" src="https://github.com/user-attachments/assets/ecf225a9-5cb0-4179-9a66-9dd07de6d66b" />
