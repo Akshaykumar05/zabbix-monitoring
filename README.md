@@ -150,5 +150,9 @@ services:
     systemctl enable zabbix-agent
     ```
     
+    ### Add the host on Zabbix Master url on dashboard
+    1. Create a new host
+    2. Use the Agent IP and other following details as shown in snapshot.
+       <img width="688" alt="zabbix-host-add" src="https://github.com/user-attachments/assets/ef0bf2c6-ef6c-42cb-9692-f6257d04770e" />
 
 
